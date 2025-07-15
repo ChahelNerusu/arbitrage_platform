@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from .data.fetch_prices import get_binance_price, get_kraken_price, find_arbitrage
+from .data.fetch_prices import get_binance_price, get_kraken_price, find_arbitrage, get_prices
 
 app = FastAPI()
 
@@ -15,11 +15,8 @@ app.add_middleware(
 
 @app.get("/api/opportunities")
 def get_opportunities():
-    prices = {
-        'BTC/USD': {
-            'binance': get_binance_price('BTCUSDT'),
-            'kraken': get_kraken_price('XBTUSD')
-        }
-    }
+    prices = get_prices()
+    print("[DEBUG] API prices:", prices)
     opportunities = find_arbitrage(prices)
+    print("[DEBUG] API opportunities:", opportunities)
     return opportunities
