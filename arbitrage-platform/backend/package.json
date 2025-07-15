@@ -1,0 +1,22 @@
+{
+  "name": "arbitrage-platform-backend",
+  "version": "1.0.0",
+  "description": "Backend for the arbitrage platform that fetches and calculates arbitrage opportunities.",
+  "main": "src/api/index.js",
+  "scripts": {
+    "start": "node src/api/index.js",
+    "dev": "nodemon src/api/index.js"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "axios": "^0.21.1",
+    "mongoose": "^5.10.9",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

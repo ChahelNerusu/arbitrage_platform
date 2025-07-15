@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the arbitrage dashboard look */
+body {
+  @apply bg-[#181e29] text-white;
+}
+
+h1, h2 {
+  @apply font-bold;
+}
+
+.dashboard {
+  @apply flex flex-col items-center min-h-screen py-10;
+}
+
+.card {
+  @apply bg-[#232b3e] rounded-xl shadow-lg p-8 w-full max-w-4xl;
+}
+
+.table-header {
+  @apply border-b border-[#2d3748] text-lg font-semibold;
+}
+
+.table-row {
+  @apply border-b border-[#2d3748] hover:bg-[#1a2233] transition-colors;
+}
+
+.table-cell {
+  @apply py-2 px-4;
+}
+
+.text-muted {
+  @apply text-[#a0aec0];
+}
